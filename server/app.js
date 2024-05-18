@@ -9,6 +9,9 @@ const app=express();
 app.use(cors());    // you're telling your Express server to allow cross-origin requests from any origin
 app.use(express.json());
 
+// Serve static files from the client folder
+app.use(express.static(path.join(__dirname, '../client')));
+
 const postsService =require('./postService');
 
 
