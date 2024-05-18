@@ -6,10 +6,10 @@ function getPosts(offset){
         //if offset is undefined or null we will set it to 0
         offset=0;
     }
-    fetch('http://localhost:5000/list?' + 'offset=' +
-    offset)
-    .then(response => response.json())
-    .then(data => loadPostsIntoSection(data));
+    fetch('/list?' + 'offset=' + offset)
+.then(response => response.json())
+.then(data => loadPostsIntoSection(data));
+
 }
 
 function loadPostsIntoSection(postsArray){
